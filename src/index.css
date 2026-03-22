@@ -1,5 +1,28 @@
 @import "tailwindcss";
 
+/* ── Face Auth component ─────────────────────────────────────────────────── */
+
+.face-auth-container {
+  @apply bg-gray-50 border border-gray-200 rounded-xl p-4 text-left;
+}
+
+.face-video-wrapper {
+  @apply relative w-full overflow-hidden rounded-lg bg-black;
+  aspect-ratio: 4 / 3;
+}
+
+.face-video {
+  @apply w-full h-full object-cover scale-x-[-1]; /* mirror for natural selfie feel */
+}
+
+.face-scanning-overlay {
+  @apply absolute inset-0 flex items-center justify-center bg-black/30;
+}
+
+.face-scan-ring {
+  @apply w-36 h-36 rounded-full border-4 border-purple-400 animate-ping opacity-75;
+}
+
 .btn-social {
   @apply flex items-center justify-center gap-2 border-solid border-gray-600 bg-white text-gray-600 py-2 hover:border-purple-700 rounded-lg font-semibold hover:opacity-90 transition text-sm;
 }
